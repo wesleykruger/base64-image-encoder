@@ -1,0 +1,26 @@
+<input id="inputFileToLoad" type="file" onchange="encodeImageFileAsBase64();" />
+<div id="newImgArea"></div>
+<script type="text/javascript">
+    function encodeImageFileAsBase64() {
+        var filesSelected = document.getElementById("inputFileToLoad").files;
+        if (filesSelected.length > 0) {
+            var fileToLoad = filesSelected[0];
+
+            var fileReader = new FileReader();
+
+            fileReader.onload = function(fileLoadedEvent) {
+                var srcData = fileLoadedEvent.target.result; // <-- data: base64
+
+                var newImage = document.createElement('img');
+                newImage.src = srcData;
+
+                document.getElementById('newImgArea').innerHTML = newImage.outerHTML;
+
+                // print base64 version in the console because it gives you the ability to copy
+                // directly to clipboard in Chrome
+                console.log(document.getElementById("newImgArea").innerHTML);
+            }
+            fileReader.readAsDataURL(fileToLoad);
+        }
+    }
+</script>
