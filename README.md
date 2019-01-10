@@ -4,4 +4,4 @@ Our correspondence module requires that we embed images directly in our HTML doc
 
 ## How to use
 
-Upload the file from your local machine. A preview will be generated below to confirm that you selected the correct image. The base64 encoding will be printed in the console with the `<img>` div predefined. I recommend using Chrome, as this will allow you to copy the encoding to your clipboard directly using the Copy button.
+Upload the file from your local machine. A preview will be generated below to confirm that you selected the correct image. The base64 encoding will be printed in the console with the `<img>` tag pre-populated. I recommend using Chrome, as this will allow you to copy the encoding to your clipboard directly using the Copy button.
